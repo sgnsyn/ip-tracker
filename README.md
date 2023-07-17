@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/sgnsyn/ip-tracker)
-- Live Site URL: [Add live site URL here](https://sgnsyn.github.io/ip-tracker/)
+- Solution URL: [github ip-tracker](https://github.com/sgnsyn/ip-tracker)
+- Live Site URL: [sgnsyn ip-tracker](https://sgnsyn.github.io/ip-tracker/)
 
 ## My process
 
