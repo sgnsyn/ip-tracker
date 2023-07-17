@@ -73,6 +73,13 @@ header {
   justify-content: center;
   gap: 2rem;
 }
+
+.hero-text h1{
+   color: var(--plain-white);
+  text-transform: capitalize;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-bigger);
+}
 /* spinner */
 #spinner-root {
   position: relative;
