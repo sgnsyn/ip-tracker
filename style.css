@@ -19,6 +19,30 @@
   --font-regural: 1.125rem;
   --font-small: 0.875rem;
 }
+/* replacement for background image to optimize for google light house */
+.background {
+  background: hsla(259, 72%, 47%, 1);
+
+  background: radial-gradient(
+    circle,
+    hsla(259, 72%, 47%, 1) 0%,
+    hsla(245, 78%, 69%, 1) 100%
+  );
+
+  background: -moz-radial-gradient(
+    circle,
+    hsla(259, 72%, 47%, 1) 0%,
+    hsla(245, 78%, 69%, 1) 100%
+  );
+
+  background: -webkit-radial-gradient(
+    circle,
+    hsla(259, 72%, 47%, 1) 0%,
+    hsla(245, 78%, 69%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5922D0", endColorstr="#7D73EE", GradientType=1 );
+}
 
 /* map maker styling */
 .my-div-icon {
