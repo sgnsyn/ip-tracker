@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 :root {
+  font-size: calc(5px + 0.5vw);
   --Very-Dark-Gray: hsl(0, 0%, 17%);
   --Dark-Gray: #454545;
   --Light-red: hsl(0, 100%, 67%);
@@ -62,7 +63,7 @@ body {
 
 header {
   height: 36%;
-  background-image: url(./Assets/pattern-bg-desktop.png);
+
   margin-inline: auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -71,15 +72,26 @@ header {
   align-items: center;
   flex-direction: column;
   gap: 1.625rem;
-  padding-top: 1.75rem;
+  padding: 1.75rem;
   z-index: 2;
 }
-
-.result-container {
+.contianer {
   position: absolute;
   z-index: 3;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -75%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-container {
+  width: fit-content;
+  height: fit-content;
+  z-index: 3;
+  box-shadow: 0rem 0.5rem 1rem 0.3rem rgba(0, 0, 0, 0.5);
 }
 
 #map {
@@ -98,8 +110,8 @@ header {
   gap: 2rem;
 }
 
-.hero-text h1{
-   color: var(--plain-white);
+.hero-text h1 {
+  color: var(--plain-white);
   text-transform: capitalize;
   font-weight: var(--weight-bold);
   font-size: var(--font-bigger);
@@ -228,29 +240,18 @@ header {
 /* Responsiveness */
 
 /* Mobile Phones */
-@media only screen and (max-width: 767px) {
-  html {
-    font-size: 12px;
-  }
-
+@media (max-width: 767px) {
   header {
-    background-image: url(./Assets/pattern-bg-mobile.png);
     height: 37%;
   }
   #map {
     height: 63%;
   }
-  .input-button-container {
-    width: 80vw;
-  }
-  #input-ip {
-    min-width: calc(100% - 3.4375rem);
-  }
 
   .result-container {
     flex-direction: column;
     align-items: center;
-    width: 80vw;
+    min-width: 65vw;
   }
   .col + .col {
     border: none;
@@ -265,99 +266,14 @@ header {
     text-align: center;
   }
 }
-@media only screen and (max-width: 400px) {
-  html {
-    font-size: 9px;
-  }
-}
 
 /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 800px) {
-  html {
-    font-size: 10px;
-  }
+@media (min-width: 768px) and (max-width: 1024px) {
   header {
-    background-image: url(./Assets/pattern-bg-desktop.png);
     height: 28%;
     justify-content: center;
   }
   #map {
     height: 72%;
-  }
-
-  .result-container {
-    max-width: 85%;
-  }
-}
-@media only screen and (min-width: 801px) and (max-width: 950px) {
-  /* Styles for tablets */
-  html {
-    font-size: 11px;
-  }
-
-  header {
-    background-image: url(./Assets/pattern-bg-desktop.png);
-    height: 28%;
-    justify-content: center;
-  }
-  #map {
-    height: 72%;
-  }
-
-  .result-container {
-    max-width: 85%;
-  }
-}
-@media only screen and (min-width: 951px) and (max-width: 1024px) {
-  html {
-    font-size: 12px;
-  }
-  header {
-    background-image: url(./Assets/pattern-bg-desktop.png);
-    height: 28%;
-    justify-content: center;
-  }
-  #map {
-    height: 72%;
-  }
-
-  .result-container {
-    max-width: 85%;
-  }
-}
-/* Desktop - 1280x720 */
-@media (min-width: 1025px) and (max-width: 1290px) {
-  /* Styles for desktop - 1280x720 */
-  html {
-    font-size: 12px;
-  }
-}
-
-/* Desktop - 1366x768 */
-@media (min-width: 1281px) and (max-width: 1366px) {
-  /* Styles for desktop - 1366x768 */
-  html {
-    font-size: 12px;
-  }
-}
-
-/* Desktop - 1920x1080 */
-@media (min-width: 1367px) and (max-width: 1920px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-/* Desktop - 2K */
-@media (min-width: 1921px) and (max-width: 2459px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-/* Desktop - 4K */
-@media (min-width: 2460px) {
-  html {
-    font-size: 32px;
   }
 }
