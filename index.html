@@ -24,12 +24,16 @@
     <script src="./main.js" defer></script>
     <title>IP Address Tracker</title>
   </head>
-  <body>
-    <header class = "background ">
+  <body class="background">
+    <header></header>
+    <!-- result -->
+
+    <!-- map -->
+    <div class="contianer">
       <div class="hero-text">
         <h1>IP address tracker</h1>
         <div id="spinner-root"></div>
-      </div>
+      </div>  
       <form action="" id="form-1">
         <div class="input-button-container">
           <input
@@ -37,35 +41,33 @@
             id="input-ip"
             placeholder="Search for any IP address or domain"
           />
-          <button type="submit" id="submit-button" aria-label="Enter"> 
-            <b style = "visibility: hidden; ">submit</b>
+          <button type="submit" id="submit-button" aria-label="Enter">
+            <b style="visibility: hidden">submit</b>
           </button>
         </div>
       </form>
-    </header>
-    <!-- result -->
-    <div class="result-container row">
-      <div class="col">
-        <p class="ip-address-title result-title">Ip address</p>
-        <p class="ip-address-value result-value">---.---.---.---</p>
-      </div>
+      <div class="result-container row">
+        <div class="col">
+          <p class="ip-address-title result-title">Ip address</p>
+          <p class="ip-address-value result-value">---.---.---.---</p>
+        </div>
 
-      <div class="col">
-        <p class="location-title result-title">location</p>
-        <p class="location-value result-value">--------, -- ------</p>
-      </div>
+        <div class="col">
+          <p class="location-title result-title">location</p>
+          <p class="location-value result-value">--------, -- ------</p>
+        </div>
 
-      <div class="col">
-        <p class="time-zone-title result-title">TimeZone</p>
-        <p class="time-zone-value result-value">--- ------</p>
-      </div>
+        <div class="col">
+          <p class="time-zone-title result-title">TimeZone</p>
+          <p class="time-zone-value result-value">--- ------</p>
+        </div>
 
-      <div class="col">
-        <p class="country-name-title result-title">Country Name</p>
-        <p class="country-name-value result-value">--------</p>
+        <div class="col">
+          <p class="country-name-title result-title">Country Name</p>
+          <p class="country-name-value result-value">--------</p>
+        </div>
       </div>
     </div>
-    <!-- map -->
     <div id="map"></div>
     <script>
       const find = (cssSelector) => document.querySelector(cssSelector);
